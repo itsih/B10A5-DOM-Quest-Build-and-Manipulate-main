@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>B10-A5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <header class="w-full sticky">
+        <nav class="bg-lime-50">
+          <div class="nav-container w-10/12 m-auto py-6 bg-transparent border-none">
+            <div class="navbar">
+              <div class="navbar-start">
+                  <button class="btn btn-primary bg-[#b4f461] text-black text-lg font-bold border-none">Blog</button>
+              </div>
+              <div class="navbar-center flex gap-2">
+                <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+                 <i class="fa-solid fa-hand-holding-dollar text-3xl"></i>
+                 <h3 class="text-black text-lg font-bold">Donate Bangladesh</h3>
+              </div>
+              <div class="navbar-end flex gap-1">
+                <i class="fa-solid fa-dollar-sign text-lg font-bold text-amber-400"></i>
+                <h2 class="text-lg font-bold">4435</h2>
+                <h2 class="text-lg font-bold">BDT</h2>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="hero-btn flex justify-center gap-8 py-6">
+          <button id="myButton" class="btn bg-gray-100 hover:bg-[#b4f461] active:bg-[#b4f461] text-black text-lg font-bold border-none">Donate</button>
+          <button id="myButton" class="btn bg-white text-black text-lg font-bold border border-gray-200  hover:bg-[#b4f461] active:bg-[#b4f461]">History</button>
+        </section>
+    </header>
+    <main class="w-9/12 mx-auto flex flex-col gap-10">
+ 
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
