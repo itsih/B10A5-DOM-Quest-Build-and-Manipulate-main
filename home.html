@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .Oleo{
+        font-family: "Oleo Script", system-ui;
+      }
+      .Josefin{
+        font-family: "Josefin Sans", sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="bg-lime-50/75 backdrop-blur-sm ">
+            <div class="nav-container w-10/12 m-auto py-6 bg-transparent border-none">
+              <div class="navbar flex flex-col gap-5 md:flex-row justify-between">
+                <div class="flex gap-2">
+                   <img src="./assets/donation.png" alt="" class="w-10 h-10">
+                   <h1 class="text-black text-2xl sm:text-4xl lg:text-5xl font-bold Oleo">Donate Bangladesh</h1>
+                </div>
+                <div class="md:order-first">
+                  <button class="btn bg-[#b4f461] text-black text-2xl border-none font-bold  Josefin px-8 py-3 italic"><a href="./index.html">Home</a></button>
+                </div>
+                <div class=" flex gap-1">
+                  <img src="./assets/coin.png" alt="">
+                  <span id="account-balance" class="text-lg font-bold">4435</span>
+                  <h2 class="text-lg font-bold">BDT</h2>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="mx-auto w-9/12 Josefin">
+      <!-- FAQ title -->
+      <div class="mt-20"><h1 class="text-5xl font-bold text-center">FAQ</h1></div>
+      <!-- Questions & Answer -->
+      <div class="join join-vertical w-full mt-10 bg-amber-50">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-bold ">What is DOM</div>
+          <div class="collapse-content">
+            <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-bold">What are the levels involved in DOM?</div>
+          <div class="collapse-content">
+            <p>Core DOM – It is used as a standard model for all document. <br>
+              HTML DOM – It is used as a standard model and programming interface for all HTML documents. <br>
+              XML DOM – It is used as a standard Model for all XML documents of different structures.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-bold">Why is the document called the Object Model?</div>
+          <div class="collapse-content">
+            <p>Document is modeled of object and document in not only the structure of an object but it also includes the behavior of document structure and object that contains the elements like HTML tags and their attributes.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
