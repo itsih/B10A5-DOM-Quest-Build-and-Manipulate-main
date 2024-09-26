@@ -6,40 +6,104 @@
     <title>B10-A5</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .Oleo{
+        font-family: "Oleo Script", system-ui;
+      }
+      .Josefin{
+        font-family: "Josefin Sans", sans-serif;
+      }
+    </style>
 </head>
 <body>
-    <header class="w-full sticky">
-        <nav class="bg-lime-50">
+    <header class="w-full h-auto sticky top-0 z-10">
+        <nav class="bg-lime-50/75 backdrop-blur-sm ">
           <div class="nav-container w-10/12 m-auto py-6 bg-transparent border-none">
-            <div class="navbar">
-              <div class="navbar-start">
-                  <button class="btn btn-primary bg-[#b4f461] text-black text-lg font-bold border-none">Blog</button>
+            <div class="navbar flex flex-col gap-5 md:flex-row justify-between">
+              <div class="flex gap-2">
+                 <img src="./assets/donation.png" alt="" class="w-10 h-10">
+                 <h1 class="text-black text-2xl sm:text-4xl lg:text-5xl font-bold Oleo">Donate Bangladesh</h1>
               </div>
-              <div class="navbar-center flex gap-2">
-                <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
-                 <i class="fa-solid fa-hand-holding-dollar text-3xl"></i>
-                 <h3 class="text-black text-lg font-bold">Donate Bangladesh</h3>
+              <div class="md:order-first">
+                <button class="btn bg-[#b4f461] text-black text-2xl border-none font-bold  Josefin px-8 py-3 italic"><a href="./home.html">Blog</a></button>
               </div>
-              <div class="navbar-end flex gap-1">
-                <i class="fa-solid fa-dollar-sign text-lg font-bold text-amber-400"></i>
-                <h2 class="text-lg font-bold">4435</h2>
+              <div class=" flex gap-1">
+                <img src="./assets/coin.png" alt="">
+                <span id="account-balance" class="text-lg font-bold">4435</span>
                 <h2 class="text-lg font-bold">BDT</h2>
               </div>
             </div>
           </div>
         </nav>
-        <section class="hero-btn flex justify-center gap-8 py-6">
-          <button id="myButton" class="btn bg-gray-100 hover:bg-[#b4f461] active:bg-[#b4f461] text-black text-lg font-bold border-none">Donate</button>
-          <button id="myButton" class="btn bg-white text-black text-lg font-bold border border-gray-200  hover:bg-[#b4f461] active:bg-[#b4f461]">History</button>
-        </section>
     </header>
-    <main class="w-9/12 mx-auto flex flex-col gap-10">
- 
+    <section class="hero-btn flex justify-center gap-8 py-6 backdrop-blur-sm">
+      <button id="myButton" class="btn bg-gray-100 text-black text-xl border-none font-bold  Josefin px-8 py-3">Donation</button>
+      <button id="myButton" class="btn bg-white text-black text-xl font-bold border border-gray-200  font-bold  Josefin px-8 py-3">History</button>
+    </section>
+    <main class="w-9/12 mx-auto flex flex-col gap-10 relative mb-20 Josefin">
+      <!-- Card 1 -->
+      <div class="bg-base-100 shadow-xl border w-full flex gap-5 flex-col md:flex-row p-6 rounded-xl h-full">
+        <div class="p-6 w-full sm:w-9/12 h-48 sm:h-auto  bg-cover rounded-xl" style="background-image: url(./assets/senbag-noakhali.jpg);">
+        </div>
+        <div class="flex flex-col gap-6 justify-between w-full">
+          <div class="flex gap-1 items-center justify-start rounded-lg bg-gray-100 p-2 w-28">
+            <img src="./assets/coin.png" alt="" class="w-5 h-5">
+            <span id="amount-1" class="font-bold text-md block">0</span>
+            <h5 class="font-bold text-md">BDT</h5>
+          </div>
+          <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+          <p>The roads and homes of Bhupatipur village under Chhoyani union in Noakhali’s Begumgunj upazila were still submerged on September 11, a month after devastation by flash floods. Around 70 percent of eight upazilas in the district have been affected by prolonged flooding. Photo: Anik Shariar</p>
+          <input id="donate-1" type="number" class="border p-5 rounded-lg" placeholder="Write Donation Amount">
+          <div class="justify-end ">
+            <button id="donate-btn-1" class="btn w-full h-auto p-4 border text-xl font-bold text-black bg-[#b4f461]">Donate Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-base-100 shadow-xl border w-full flex gap-5 flex-col md:flex-row p-6 rounded-xl">
+        <div class="p-6  w-full sm:w-9/12 bg-cover rounded-xl h-48 sm:h-auto" style="background-image: url(./assets/feni.png);">
+        </div>
+        <div class="flex flex-col gap-6 justify-between w-full ">
+          <div class="flex gap-1 items-center justify-center rounded-lg bg-gray-100 p-2 w-28">
+            <img src="./assets/coin.png" alt="" class="w-5 h-5">
+            <span id="amount-2" class="font-bold text-md">0</span>
+            <h5 class="font-bold text-md">BDT</h5>
+          </div>
+          <h2 class="card-title">Donate for Flood at Feni, Bangladesh</h2>
+          <p>Nine villages have been flooded in Fulgazi upazila of Feni as the dam on Muhuri river was damaged at three points due to continuous rain and onrush of water from the hills.Currently, water of the Muhuri river is flowing 1.13 cm above danger level.</p>
+          <input id="donate-2" type="number" class="border p-5 rounded-lg" placeholder="Write Donation Amount">
+          <div class="justify-end ">
+            <button id="donate-btn-2" class="btn w-full h-auto p-4 border text-xl font-bold text-black bg-[#b4f461]">Donate Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-base-100 shadow-xl border w-full flex gap-5 flex-col md:flex-row p-6 rounded-xl">
+        <div class="p-6  w-full sm:w-9/12 bg-cover rounded-xl  h-48 sm:h-auto" style="background-image: url(./assets/comilla.jpg);">
+        </div>
+        <div class="flex flex-col gap-6 justify-between w-full ">
+          <div class="flex gap-1 items-center justify-center rounded-lg bg-gray-100 p-2 w-28">
+            <img src="./assets/coin.png" alt="" class="w-5 h-5">
+            <span id="amount-3" class="font-bold text-md">0</span>
+            <h5 class="font-bold text-md">BDT</h5>
+          </div>
+          <h2 class="card-title">Donate for Flood at Cumilla, Bangladesh</h2>
+          <p>The embankment on the bank of Gumti river washed away due to heavy rainfall and an onrush of water from upstream, deteriorating flood situation in Comilla.Sources said that the dam located in Burburia area of Sholnal union under Burichang upazila collapsed around 11:45 pm on Thursday (August 22).</p>
+          <input id="donate-3" type="number" class="border p-5 rounded-lg" placeholder="Write Donation Amount">
+          <div class="justify-end ">
+            <button id="donate-btn-3" class="btn w-full h-auto p-4 border text-xl font-bold text-black bg-[#b4f461]">Donate Now</button>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer>
-
+      <div class="w-full h-28 bg-lime-50"></div>
     </footer>
+    <!-- <script src="./utilities.js"></script> -->
     <script src="script.js"></script>
 </body>
 </html>
