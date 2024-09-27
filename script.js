@@ -34,7 +34,7 @@ document.getElementById("donate-btn-2")
     const amount2 = getTextFieldValueById('amount-2');
     
     // input validation
-    if(donate2<=0 || donate2>balance || isNaN(donate1)){
+    if(donate2<=0 || donate2>balance || isNaN(donate2)){
         alert('Invalid Input');
         return;
     }
@@ -62,7 +62,7 @@ document.getElementById("donate-btn-3")
     const amount3 = getTextFieldValueById('amount-3');
 
     // input validation
-    if(donate3<=0 || donate3>balance || isNaN(donate1)){
+    if(donate3<=0 || donate3>balance || isNaN(donate3)){
         alert('Invalid Input');
         return;
     }
