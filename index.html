@@ -40,10 +40,12 @@
         </nav>
     </header>
     <section class="hero-btn flex justify-center gap-8 py-6 backdrop-blur-sm">
-      <button id="myButton" class="btn bg-gray-100 text-black text-xl border-none font-bold  Josefin px-8 py-3">Donation</button>
-      <button id="myButton" class="btn bg-white text-black text-xl font-bold border border-gray-200  font-bold  Josefin px-8 py-3">History</button>
+      <button id="Donation-tab" class="btn text-black text-xl border-none font-bold  Josefin px-8 py-3 bg-[#b4f461] shadow-lg">Donation</button>
+      <button id="History-tab" class="btn  text-black text-xl font-bold border border-gray-200  font-bold  Josefin px-8 py-3">History</button>
     </section>
     <main class="w-9/12 mx-auto flex flex-col gap-10 relative mb-20 Josefin">
+      <!-- Donate Section -->
+      <div class="space-y-6" id="donate-section">
       <!-- Card 1 -->
       <div class="bg-base-100 shadow-xl border w-full flex gap-5 flex-col md:flex-row p-6 rounded-xl h-full">
         <div class="p-6 w-full sm:w-9/12 h-48 sm:h-auto  bg-cover rounded-xl" style="background-image: url(./assets/senbag-noakhali.jpg);">
@@ -55,10 +57,25 @@
             <h5 class="font-bold text-md">BDT</h5>
           </div>
           <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
-          <p>The roads and homes of Bhupatipur village under Chhoyani union in Noakhali’s Begumgunj upazila were still submerged on September 11, a month after devastation by flash floods. Around 70 percent of eight upazilas in the district have been affected by prolonged flooding. Photo: Anik Shariar</p>
+          <p>The roads and homes of Bhupatipur village under Chhoyani union in Noakhali's Begumgunj upazila were still submerged on September 11, a month after devastation by flash floods. Around 70 percent of eight upazilas in the district have been affected by prolonged flooding. Photo: Anik Shariar</p>
           <input id="donate-1" type="number" class="border p-5 rounded-lg" placeholder="Write Donation Amount">
-          <div class="justify-end ">
+          <div class=" justify-end ">
+            <!-- Open the modal using ID.showModal() method -->
             <button id="donate-btn-1" class="btn w-full h-auto p-4 border text-xl font-bold text-black bg-[#b4f461]">Donate Now</button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box flex flex-col items-center justify-center">
+                <h3 class="text-2xl font-bold">Congrates!</h3>
+                <img src="./assets/coin.png" alt="">
+                <p class="py-4">You have donated for humankind</p>
+                <h6 class="text-xl font-bold">Successfully</h6>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn ">Close Confirmation</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
@@ -98,11 +115,12 @@
           </div>
         </div>
       </div>
+      </div>
       <!-- Transaction section -->
-       <div id="transaction-container" class="mt-10 mb-10 space-y-3">
-
+       <div id="transaction-section" class="hidden">
+        <h2 class="text-5xl font-bold text-center">Transaction History</h2>
+        <div id="transaction-container" class="mt-10 mb-10 space-y-3"></div>
        </div>
-
     </main>
     <footer>
       <div class="w-full h-28 bg-lime-50"></div>
